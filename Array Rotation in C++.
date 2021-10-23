@@ -1,0 +1,37 @@
+// This program rotates an array towards right by d steps where d is one of the input!
+// Just enter n and d in the first line where n is the number of elements in the array and d is stated above.
+// In the second line, input your array.
+// Boom, you just got your array rotated!
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+int n, d;
+
+cin >> n >> d;
+
+int rot = d % n, arr[n];
+
+for(int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
+    int temp[rot];
+
+for(int i = 0; i < rot; i++){
+        temp[i] = arr[i];
+    }
+
+for(int i = rot; i < n; i++){
+        cout << arr[i] << " ";
+    }
+
+for(int i = 0; i < rot; i++){
+        cout << temp[i] << " ";
+    }
+
+return 0;
+}
+
